@@ -1,0 +1,92 @@
+@import "./functions/get";
+@import "./maps/maps";
+
+.dF {
+  display: flex;
+}
+
+.fdR {
+  flex-direction: row;
+}
+
+.fdC {
+  flex-direction: column;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}
+
+.fwR {
+  font-weight: get($font-weights, "regular");
+}
+
+.fwB {
+  font-weight: get($font-weights, "bold");
+}
+
+.fs-12 {
+  font-size: nth($font-size, 1);
+}
+
+.fs14 {
+  font-size: nth($font-size, 2);
+}
+
+.pl4 {
+  padding-left: 4px;
+}
+
+.pl7 {
+  padding-left: 7px;
+}
+
+.pr4 {
+  padding-right: 4px;
+}
+
+.pr7 {
+  padding-right: 7px;
+}
+
+.ml8 {
+  margin-left: 8px;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+.width684 {
+  width: 684px;
+}
+
+.width860 {
+  width: 860px;
+}
+
+.line-through-text {
+  text-decoration: line-through;
+}
+
+.previewProgressBar {
+  width: 240px;
+  height: 24px;
+}
+
+.uploadProgressBar {
+  width: 324px;
+  height: 24px;
+}

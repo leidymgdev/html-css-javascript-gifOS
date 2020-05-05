@@ -1,0 +1,5 @@
+@import "../atomic";
+
+.theme-sailor-day {
+  @include themable($theme-sailor-day);
+}

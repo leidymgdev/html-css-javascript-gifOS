@@ -1,0 +1,142 @@
+$theme-sailor-night: (
+  "body": (
+    "background-color": #110038
+  ),
+  "font-color": (
+    "principal": #ffffff,
+    "secondary": #ffffff,
+    "disabled": #8f8f8f
+  ),
+  "buttons": (
+    "primary-button": (
+      "normal": (
+        "background-color": #ee3efe,
+        "color": #ffffff,
+        "border": 1px solid #110038,
+        "box-shadow": (
+          inset -1px -1px 0 0 #a72cb3,
+          inset 1px 1px 0 0 #ffffff
+        )
+      ),
+      "hover": (
+        "background-color": #ce36db
+      ),
+      "active": (
+        "background-color": #ce36db
+      )
+    ),
+    "secundary-button": (
+      "normal": (
+        "background-color": #2e32fb,
+        "color": #ffffff,
+        "border": 1px solid #110038,
+        "box-shadow": (
+          inset -1px -1px 0 0 #a72cb3,
+          inset 1px 1px 0 0 #ffffff
+        )
+      ),
+      "hover": (
+        "background-color": #2629cc
+      ),
+      "active": (
+        "background-color": #2629cc
+      )
+    ),
+    "disabled-button": (
+      "background-color": #b4b4b4,
+      "color": #8f8f8f,
+      "border": 1px solid #808080,
+      "box-shadow": (
+        inset -1px -1px 0 0 #b4b4b4,
+        inset 1px 1px 0 0 #ffffff
+      )
+    ),
+    "a-button": (
+      "normal": (
+        "background-color": #2e32fb,
+        "color": #ffffff
+      ),
+      "hover": (
+        "background-color": #2629cc
+      ),
+      "active": (
+        "background-color": #2629cc
+      )
+    )
+  ),
+  "a": (
+    "color": #ffffff,
+    "border": 1px dotted #ffffff
+  ),
+  "imagesAndIcons": (
+    "logo": (
+      "src": "../../../assets/images/gifOF_logo_dark.png"
+    ),
+    "lupa": (
+      "src": "../../../assets/icons/lupa_light.svg"
+    )
+  ),
+  "form": (
+    "background-color": #b4b4b4,
+    "option": (
+      "normal": (
+        "background-color": #cccccc,
+        "color": #110038,
+        "border": 1px solid #808080,
+        "box-shadow": (
+          inset -1px -1px 0 0 #b4b4b4,
+          inset 1px 1px 0 0 #ffffff
+        )
+      ),
+      "hover": (
+        "background-color": #2e32fb,
+        "color": #ffffff,
+        "border": 1px solid rgba(51, 53, 143, 0.2),
+        "box-shadow": (
+          inset -1px -1px 0 0 #e6dce4,
+          inset 1px 1px 0 0
+        )
+      )
+    ),
+    "a": (
+      "background-color": #cccccc,
+      "border": 1px solid #808080
+    )
+  ),
+  "text-box-read-only": (
+    "border": 1px solid #2e32fb,
+    "box-shadow": (
+      inset -2px -2px 0 0 #e6dce4,
+      inset 2px 2px 0 0 #110038
+    )
+  ),
+  "gradient": (
+    "background-image": linear-gradient(270deg, #ee3efe 0%, #2e32fb 100%),
+    "box-shadow": 0 1px 0 0 #110038
+  ),
+  "general": (
+    "box-shadow": (
+      inset -2px -2px 0 0 #5c5c5c,
+      inset 2px 2px 0 0 #ffffff
+    ),
+    "background-color": (
+      #b4b4b4
+    ),
+    "outline": 1px dotted #110038
+  ),
+  "div-autocomplete-hashTag": (
+    "background-color": #2e32fb,
+    "border": 1px solid #4c2f99
+  ),
+  "input-search-gif": (
+    "background-color": #ffffff,
+    "border": 1px solid #979797,
+    "box-shadow": (
+      inset -2px -2px 0 0 #e6e6e6,
+      inset 2px 2px 0 0 #000000
+    )
+  ),
+  "filter": (
+    "invert": invert(1)
+  )
+);

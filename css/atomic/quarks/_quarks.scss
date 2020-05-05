@@ -1,0 +1,14 @@
+@import '../utilities/utilities';
+
+a {
+  cursor: pointer;
+}
+
+@mixin body($theme) {
+  background-color: get($theme, 'body.background-color');
+  font-family: get($font-family, 'font-family');
+}
+
+@mixin marginContainer() {
+  margin: 0px 140px 0 100px;
+}

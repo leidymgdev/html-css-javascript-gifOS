@@ -1,0 +1,138 @@
+$theme-sailor-day: (
+  "body": (
+    "background-color": #fff4fd
+  ),
+  "font-color": (
+    "principal": #ffffff,
+    "secondary": #110038,
+    "disabled": #b4b4b4
+  ),
+  "buttons": (
+    "primary-button": (
+      "normal": (
+        "background-color": #f7c9f3,
+        "color": #110038,
+        "border": 1px solid #110038,
+        "box-shadow": (
+          inset -1px -1px 0 0 #997d97,
+          inset 1px 1px 0 0 #ffffff
+        )
+      ),
+      "hover": (
+        "background-color": #e6bbe2
+      ),
+      "active": (
+        "background-color": #e6bbe2
+      )
+    ),
+    "secundary-button": (
+      "normal": (
+        "background-color": #fff4fd,
+        "color": #110038,
+        "border": 1px solid #110038,
+        "box-shadow": (
+          inset -1px -1px 0 0 #997d97,
+          inset 1px 1px 0 0 #ffffff
+        )
+      ),
+      "hover": (),
+      "active": ()
+    ),
+    "disabled-button": (
+      "background-color": #e6e6e6,
+      "color": #b4b4b4,
+      "border": 1px solid #808080,
+      "box-shadow": (
+        inset -1px -1px 0 0 #b4b4b4,
+        inset 1px 1px 0 0 #ffffff
+      )
+    ),
+    "a-button": (
+      "normal": (
+        "background-color": #4180f6,
+        "color": #ffffff
+      ),
+      "hover": (
+        "background-color": #3a72db
+      ),
+      "active": (
+        "background-color": #2629cc
+      )
+    )
+  ),
+  "a": (
+    "color": #110038,
+    "border": 1px dotted #110038
+  ),
+  "imagesAndIcons": (
+    "logo": (
+      "src": "../../../assets/images/gifOF_logo.png"
+    ),
+    "lupa": (
+      "src": "../../../assets/icons/lupa.svg"
+    )
+  ),
+  "form": (
+    "background-color": #e6e6e6,
+    "option": (
+      "normal": (
+        "background-color": #f0f0f0,
+        "color": #110038,
+        "border": 1px solid #808080,
+        "box-shadow": (
+          inset -1px -1px 0 0 #b4b4b4,
+          inset 1px 1px 0 0 #ffffff
+        )
+      ),
+      "hover": (
+        "background-color": #fff4fd,
+        "color": #110038,
+        "border": 1px solid #cca6c9,
+        "box-shadow": (
+          inset -1px -1px 0 0 #e6dce4,
+          inset 1px 1px 0 0 #ffffff
+        )
+      )
+    ),
+    "a": (
+      "background-color": #f0f0f0,
+      "border": 1px solid #808080
+    )
+  ),
+  "text-box-read-only": (
+    "border": 1px solid #e6bbe2,
+    "box-shadow": (
+      inset -2px -2px 0 0 #e6dce4,
+      inset 2px 2px 0 0 #80687d
+    )
+  ),
+  "gradient": (
+    "background-image": linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%),
+    "box-shadow": 0 1px 0 0 #110038
+  ),
+  "general": (
+    "box-shadow": (
+      inset -2px -2px 0 0 #b4b4b4,
+      inset 2px 2px 0 0 #ffffff
+    ),
+    "background-color": (
+      #e6e6e6
+    ),
+    "outline": 1px dotted #110038
+  ),
+  "div-autocomplete-hashTag": (
+    "background-color": #4180f6,
+    "border": 1px solid #4c2f99
+  ),
+  "input-search-gif": (
+    "background-color": #ffffff,
+    "border": 1px solid #979797,
+    "box-shadow": (
+      inset -2px -2px 0 0 #e6e6e6,
+      inset 2px 2px 0 0 #000000
+    )
+  ),
+  "filter": (
+    "invert": invert(0)
+  )
+);

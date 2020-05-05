@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+    <title>gifOS</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      id="favicon"
+      href="../../assets/icons/theme-sailor-day.ico"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/atomic/utilities/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/atomic/pages/theme-sailor-day.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/atomic/pages/theme-sailor-night.css" />
+  </head>
+
+  <body id="body" class="theme-sailor-day">
+    <header class="header">
+      <div class="div-welcome-header gradient">
+        <p class="fs-12">
+          ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas:
+          <span id="span-visitor-counter"></span>
+        </p>
+      </div>
+
+      <div class="content-header dF">
+        <a href="../../index.html">
+          <img
+            src="../../assets/icons/arrow.svg"
+            alt="arrow_back"
+            class="img-arrow-back hide"
+            id="img-arrow-back"
+          />
+          <img src="../../assets/images/gifOF_logo.png" alt="gifOS_logo" class="gifOS-logo" />
+        </a>
+        <div class="div-header-buttons dF" id="div-header-buttons">
+          <a href="../../views/myGifos/index.html?view=create" class="btn-primary btn-lg">Crear Guifos</a>
+          <div class="dropdown">
+            <div class="div-change-theme dF">
+              <span class="btn-primary btn-lg">Elegir tema</span>
+              <span onclick="displayThemeMenu()" class="span-drop-down btn-primary">
+                <img src="../../assets/icons/dropdown.svg" alt="change-theme" />
+              </span>
+            </div>
+            <div id="my-dropdown-theme" class="dropdown-content hide">
+              <a onclick="changeTheme('theme-sailor-day')">Sailor Day</a>
+              <a onclick="changeTheme('theme-sailor-night')">Sailor Night</a>
+            </div>
+          </div>
+          <a href="../../views/myGifos/index.html?view=list" class="a-my-guifos">Mis guifos</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-create-gifos" id="section-create-gifos">
+      <div class="container">
+        <div class="gradient">
+          <span class="fwB fs14 pl4" id="span-title-create-gifos">Crear Guifos</span>
+          <a href="" class="hide" id="a-close-create-gif">
+            <img src="../../assets/icons/close.svg" alt="close-create-gif" class="close-create-gif" />
+          </a>
+        </div>
+        <div class="content" id="div-create-gifos">
+          <div class="div-content-create-guifo" id="div-content-create-guifo">
+            <div class="body-content">
+              <div class="img-window">
+                <img src="../../assets/images/window_img.png" alt="gifOS_logo" class="gifOS-logo" />
+              </div>
+              <div class="info">
+                <p><strong>Aquí podrás crear tus propios guifos</strong></p>
+                <p>
+                  Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén
+                  guifos personalizados. Los pasos para crear tu guifo son:
+                </p>
+                <ul>
+                  <li><strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
+                  <li><strong>2)</strong> Capturar tu momento guifo</li>
+                  <li><strong>3)</strong> Revisar el momento</li>
+                  <li><strong>4)</strong> Listo para subir y compartir!</li>
+                </ul>
+                <p>¿Quieres comenzar a crear tu <strong>guifo</strong> ahora?</p>
+              </div>
+            </div>
+            <div class="btns-create-gifs">
+              <a href="./index.html?view=list" class="btn-secundary btn-lg mr8">Cancelar</a>
+              <a class="btn-primary btn-lg" onclick="start();">Comenzar</a>
+            </div>
+          </div>
+
+          <div class="div-content-check-before-start hide" id="div-content-check-before-start">
+            <video id="video-record" class="video-record preview-video-image"></video>
+            <img id="img-preview" src="#" class="img-preview preview-video-image hide" alt="img-preview" />
+            <div class="btns-process-capture-gifs">
+              <div
+                class="div-chronometer-progress-repeat-upload-ready-gif hide"
+                id="div-chronometer-progress-repeat-upload-ready-gif"
+              >
+                <div class="chronometer-play-progress-bar">
+                  <input
+                    type="text"
+                    id="input-chronometer"
+                    name="input-chronometer"
+                    class="input-chronometer hide"
+                    placeholder="00:00:00:00"
+                    readonly
+                  />
+
+                  <div class="play-progress-bar">
+                    <a
+                      id="btn-play-preview-gif"
+                      onclick="playPreview();"
+                      class="btn-play-preview-gif mr8 hide"
+                    >
+                      <img
+                        src="../../assets/icons/forward.svg"
+                        alt="play-forward"
+                        class="play-forward"
+                        id="play-forward"
+                      />
+                    </a>
+                    <div id="preview-progress-bar-gif" class="preview-progress-bar-gif"></div>
+                  </div>
+                </div>
+
+                <div class="repeat-upload-gif">
+                  <a id="btn-repeat-capture" onclick="repeat();" class="btn-secundary mr8 btn-lg hide">
+                    Repetir captura
+                  </a>
+                  <a id="btn-upload-gif" onclick="upload();" class="btn-primary btn-lg hide">
+                    Subir Guifo
+                  </a>
+                </div>
+
+                <div class="ready-gif hide" id="btn-ready" onclick="ready();">
+                  <span class="btn-ready span-icon-recording">
+                    <img src="../../assets/icons/recording.svg" alt="change-theme" class="icon-recording" />
+                  </span>
+                  <span class="btn-ready btn-lg">Listo</span>
+                </div>
+              </div>
+
+              <div class="btn-capture-gif" id="btn-capture-gif" onclick="capture();">
+                <span class="span-icon-camera btn-primary">
+                  <img src="../../assets/icons/camera.svg" alt="icon-camera" class="icon-camera" />
+                </span>
+                <span class="btn-primary btn-lg">Capturar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-content-uploading-gif hide" id="div-content-uploading-gif">
+            <div class="body-content">
+              <img src="../../assets/images/globe_img.png" alt="globe-img" class="globe-img" />
+              <span>Estamos subiendo tu guifo</span>
+              <div id="div-upload-progress-bar-gif" class="div-upload-progress-bar-gif"></div>
+              <span
+                ><span>Tiempo restante:</span> <span class="line-through-text">38 años</span>
+                <span>algunos minutos</span></span
+              >
+            </div>
+
+            <div class="btns-uploading-gif">
+              <a id="btn-cancel-gif" onclick="cancel();" class="btn-secundary btn-lg">
+                Cancelar
+              </a>
+            </div>
+          </div>
+
+          <div class="div-content-successfully-uploaded-gif hide" id="div-content-successfully-uploaded-gif">
+            <div class="body-content">
+              <div>
+                <img id="img-gif-preview" src="#" alt="img-gif-preview" />
+              </div>
+              <div>
+                <span>Guifo Subido Con Éxito</span>
+                <div class="btns-copy-download-gif">
+                  <a class="btn-secundary btn-lg" id="btn-copy-link-guifo" onclick="copyLinkGuifo()"
+                    >Copiar enlace guifo</a
+                  >
+                  <a class="btn-secundary btn-lg" id="btn-download-guifo" onclick="downloadGuifo(event)"
+                    >Descargar gifo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="btn-ready">
+              <a href="" class="btn-primary btn-lg" id="btn-ready-guifo" onclick="finish()">Listo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-my-gifos" id="section-my-gifos">
+      <input
+        type="text"
+        id="input-my-gifos"
+        name="input-my-gifos"
+        class="input-my-gifos"
+        placeholder="my gifos"
+        readonly
+      />
+      <div class="div-my-gifos-gif" id="div-my-gifos-gif"></div>
+    </section>
+
+    <!-- Assets -->
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js" type="text/javascript"></script>
+    <script src="../../js/assets/RecordRTC.js" type="text/javascript"></script>
+
+    <!-- Const -->
+    <script src="../../js/shared/const.js" type="text/javascript"></script>
+
+    <!-- Utilities -->
+    <script src="../../js/shared/Request.js" type="text/javascript"></script>
+    <script src="../../js/shared/Utilities.js" type="text/javascript"></script>
+    <script src="../../js/shared/Modal.js" type="text/javascript"></script>
+    <script src="../../js/shared/Chronometer.js" type="text/javascript"></script>
+    <script src="../../js/shared/Clipboard.js" type="text/javascript"></script>
+    <script src="../../js/shared/ProgressBar.js" type="text/javascript"></script>
+
+    <!-- Components -->
+    <script src="../../js/components/myGifOS/Recording.js" type="text/javascript"></script>
+    <script src="../../js/components/myGifOS/index.js" type="text/javascript"></script>
+  </body>
+</html>

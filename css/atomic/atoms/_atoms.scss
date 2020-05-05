@@ -1,0 +1,328 @@
+@mixin btn-primary($theme) {
+  @extend %btn;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0px;
+  background-color: get(
+    $theme,
+    "buttons.primary-button.normal.background-color"
+  );
+  color: get($theme, "buttons.primary-button.normal.color");
+  border: get($theme, "buttons.primary-button.normal.border");
+  box-shadow: get($theme, "buttons.primary-button.normal.box-shadow");
+
+  &:hover {
+    background-color: get(
+      $theme,
+      "buttons.primary-button.hover.background-color"
+    );
+    outline: get($theme, "general.outline");
+    outline-offset: -4px;
+  }
+
+  &:focus {
+    background-color: get(
+      $theme,
+      "buttons.primary-button.active.background-color"
+    );
+    outline: get($theme, "general.outline");
+    outline-offset: -4px;
+  }
+}
+
+@mixin btn-secundary($theme) {
+  @extend %btn;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0px;
+  background-color: get(
+    $theme,
+    "buttons.secundary-button.normal.background-color"
+  );
+  color: get($theme, "buttons.secundary-button.normal.color");
+  border: get($theme, "buttons.secundary-button.normal.border");
+  box-shadow: get($theme, "buttons.secundary-button.normal.box-shadow");
+}
+
+@mixin btn-disabled($theme) {
+  @extend %btn;
+  text-decoration: none;
+  padding: 0px;
+  background-color: get($theme, "buttons.disabled-button.background-color");
+  color: get($theme, "buttons.disabled-button.color");
+  border: get($theme, "buttons.disabled-button.border");
+  box-shadow: get($theme, "buttons.disabled-button.box-shadow");
+
+  pointer-events: none;
+}
+
+%btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.btn-lg {
+  width: 144px;
+  height: 36px;
+}
+
+@mixin gradient($theme) {
+  background-image: get($theme, "gradient.background-image");
+  // box-shadow: get($theme, 'gradient.box-shadow');
+  color: get($theme, "font-color.principal");
+  letter-spacing: 0;
+}
+
+@mixin div-welcome-header($theme) {
+  @include gradient($theme);
+
+  p {
+    margin: 0;
+    height: 29px;
+    font-weight: get($font-weights, "regular");
+    padding: 5px 0px 0px 5px;
+  }
+
+  @media (min-width: 992px) {
+    p {
+      height: 18px;
+    }
+  }
+}
+
+@mixin gifOS-logo($theme) {
+  content: url(get($theme, "imagesAndIcons.logo.src"));
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
+}
+
+@mixin dropdown($theme) {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+
+    @media (min-width: 992px) {
+      padding: 0 16px 0 16px;
+    }
+
+    .span-drop-down {
+      width: 30px;
+      height: 36px;
+      cursor: pointer;
+
+      .icon-dropdown {
+        filter: get($theme, "filter.invert");
+      }
+    }
+
+    .div-change-theme {
+      &:hover > span {
+        background-color: get(
+          $theme,
+          "buttons.primary-button.hover.background-color"
+        );
+        outline: get($theme, "general.outline");
+        outline-offset: -4px;
+      }
+    }
+  }
+
+  .dropdown-content {
+    .hide {
+      @extend .hide;
+    }
+    position: absolute;
+    background-color: get($theme, "form.background-color");
+    min-width: 158px;
+    padding: 10px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+      background-color: get($theme, "form.option.normal.background-color");
+      color: get($theme, "form.option.normal.color");
+      border: get($theme, "form.option.normal.border");
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        background-color: get($theme, "form.option.hover.background-color");
+        color: get($theme, "form.option.hover.color");
+        border: get($theme, "form.option.hover.border");
+        box-shadow: get($theme, "general.box-shadow");
+        &::first-letter {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .a-my-guifos {
+    &::first-letter {
+      text-decoration: underline;
+    }
+    &:hover {
+      border: get($theme, "a.border");
+      padding: 6px 15px 6px 0px;
+    }
+    @media (max-width: 600px) {
+      padding-top: 16px;
+    }
+  }
+}
+
+@mixin hash-tag-bottom($display: none) {
+  .hash-tag-bottom {
+    display: $display;
+    @if $display {
+      position: absolute;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (min-width: 992px) {
+        width: calc(100% - 11px);
+        bottom: 0px;
+      }
+
+      @media (max-width: 600px) {
+        width: calc(100% - 6px);
+        bottom: 0px;
+      }
+    }
+  }
+}
+
+.hash-tag-top {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: calc(100% - 11px);
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@mixin form-search($theme) {
+  .form-search {
+    display: flex;
+    padding: 12px 15px 12px 15px;
+    align-items: center;
+
+    .input-search-gif {
+      padding: 13px 16px;
+      width: 70%;
+      background-color: get($theme, "input-search-gif.background-color");
+      border: get($theme, "input-search-gif.border");
+      box-shadow: get($theme, "input-search-gif.box-shadow");
+    }
+
+    @media (min-width: 992px) {
+      .input-search-gif {
+        width: 92%;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      height: 36px;
+      width: 30%;
+    }
+
+    @media (min-width: 992px) {
+      a {
+        width: 8%;
+      }
+    }
+  }
+}
+
+@mixin div-autocomplete-suggested-search($theme) {
+  .div-autocomplete-suggested-search {
+    height: auto;
+    background-color: get($theme, "form.background-color");
+    z-index: 1;
+    width: 100%;
+
+    .search {
+      @media (min-width: 992px) {
+        padding: 17px calc(9%) 17px 17px;
+        box-shadow: get($theme, "general.box-shadow");
+      }
+      .a-busqueda {
+        padding: 6px 0px 0px 6px;
+        height: 28px;
+        margin-bottom: 11px;
+        background-color: get($theme, "form.a.background-color");
+        border: get($theme, "form.a.border");
+        box-shadow: get($theme, "general.box-shadow");
+        cursor: pointer;
+        &:hover {
+          outline: get($theme, "general.outline");
+          outline-offset: -4px;
+        }
+      }
+    }
+  }
+}
+
+@mixin div-autocomplete-hashTag($theme) {
+  .div-autocomplete-hashTag {
+    background-color: get($theme, "body.background-color");
+
+    @media (min-width: 992px) {
+      padding-top: 27px;
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 15px;
+    }
+
+    a {
+      background-color: get(
+        $theme,
+        "div-autocomplete-hashTag.background-color"
+      );
+      padding: 8px;
+      margin-right: 8px;
+      color: white;
+      border: get($theme, "div-autocomplete-hashTag.border");
+      box-shadow: get($theme, "general.box-shadow");
+
+      @media (max-width: 600px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.preview-video-image {
+  width: 828px;
+  height: 440px;
+  padding: 2px;
+  background-color: #ffffff;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+  object-fit: fill;
+
+  @media (max-width: 860px) {
+    margin: 16px 0 0 0;
+    width: 100%;
+    height: 100%;
+  }
+}

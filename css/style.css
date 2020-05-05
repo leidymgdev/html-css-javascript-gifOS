@@ -1,0 +1,241 @@
+.dF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fdR {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.fdC {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}
+
+.fwR {
+  font-weight: 400;
+}
+
+.fwB {
+  font-weight: 700;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs14 {
+  font-size: 14px;
+}
+
+.pl4 {
+  padding-left: 4px;
+}
+
+.pl7 {
+  padding-left: 7px;
+}
+
+.pr4 {
+  padding-right: 4px;
+}
+
+.pr7 {
+  padding-right: 7px;
+}
+
+.ml8 {
+  margin-left: 8px;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+.width684 {
+  width: 684px;
+}
+
+.width860 {
+  width: 860px;
+}
+
+.line-through-text {
+  text-decoration: line-through;
+}
+
+.previewProgressBar {
+  width: 240px;
+  height: 24px;
+}
+
+.uploadProgressBar {
+  width: 324px;
+  height: 24px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.btn-lg {
+  width: 144px;
+  height: 36px;
+}
+
+.hash-tag-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: calc(100% - 11px);
+}
+
+.hash-tag-top span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview-video-image {
+  width: 828px;
+  height: 440px;
+  padding: 2px;
+  background-color: #ffffff;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+@media (max-width: 860px) {
+  .preview-video-image {
+    margin: 16px 0 0 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.dF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fdR {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.fdC {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}
+
+.fwR {
+  font-weight: 400;
+}
+
+.fwB {
+  font-weight: 700;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs14 {
+  font-size: 14px;
+}
+
+.pl4 {
+  padding-left: 4px;
+}
+
+.pl7 {
+  padding-left: 7px;
+}
+
+.pr4 {
+  padding-right: 4px;
+}
+
+.pr7 {
+  padding-right: 7px;
+}
+
+.ml8 {
+  margin-left: 8px;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+.width684 {
+  width: 684px;
+}
+
+.width860 {
+  width: 860px;
+}
+
+.line-through-text {
+  text-decoration: line-through;
+}
+
+.previewProgressBar {
+  width: 240px;
+  height: 24px;
+}
+
+.uploadProgressBar {
+  width: 324px;
+  height: 24px;
+}
+/*# sourceMappingURL=style.css.map */

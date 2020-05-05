@@ -1,0 +1,13 @@
+{
+  "name": "dwfsmedglob1gifos",
+  "version": "1.0.0",
+  "description": "Catalog of GIFs that contains search functionality, interaction with an external API and capture of video",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/martinezgiraldoleidy/dwfs-med-glob-1-gifOS.git"
+  },
+  "keywords": [
+    "gifOs"
+  ],
+  "author": "martinezgiraldoleidy"
+}
