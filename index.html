@@ -4,40 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
 
     <title>gifOS</title>
     <!-- Favicon LEIDY -->
-    <link rel="shortcut icon" type="image/x-icon" id="favicon" href="./assets/icons/theme-sailor-day.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      id="favicon"
+      href="./assets/icons/theme-sailor-day.ico"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" type="text/css" href="./css/atomic/utilities/normalize.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/atomic/utilities/normalize.css"
+    />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./css/atomic/pages/theme-sailor-day.css" />
-    <link rel="stylesheet" type="text/css" href="./css/atomic/pages/theme-sailor-night.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/atomic/pages/theme-sailor-day.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/atomic/pages/theme-sailor-night.css"
+    />
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WZC5LXZ");
+    </script>
   </head>
 
   <body id="body" class="theme-sailor-day">
     <header class="header">
       <div class="div-welcome-header gradient">
         <p class="fs-12">
-          ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas:
+          ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+          de visitas:
           <span id="span-visitor-counter"></span>
         </p>
       </div>
 
       <div class="content-header dF">
         <a href="./index.html">
-          <img src="./assets/images/gifOF_logo.png" alt="gifOS-logo" class="gifOS-logo" />
+          <img
+            src="./assets/images/gifOF_logo.png"
+            alt="gifOS-logo"
+            class="gifOS-logo"
+          />
         </a>
         <div class="div-header-buttons dF">
-          <a href="./views/myGifos/index.html?view=create" class="btn-primary btn-lg">Crear Guifos</a>
+          <a
+            href="./views/myGifos/index.html?view=create"
+            class="btn-primary btn-lg"
+            >Crear Guifos</a
+          >
           <div class="dropdown">
             <div class="div-change-theme dF">
               <span class="btn-primary btn-lg">Elegir tema</span>
-              <span onclick="displayThemeMenu()" class="span-drop-down btn-primary">
-                <img src="./assets/icons/dropdown.svg" alt="change-theme" class="icon-dropdown" />
+              <span
+                onclick="displayThemeMenu()"
+                class="span-drop-down btn-primary"
+              >
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt="change-theme"
+                  class="icon-dropdown"
+                />
               </span>
             </div>
             <div id="my-dropdown-theme" class="dropdown-content hide">
@@ -45,7 +97,9 @@
               <a onclick="changeTheme('theme-sailor-night')">Sailor Night</a>
             </div>
           </div>
-          <a href="./views/myGifos/index.html?view=list" class="a-my-guifos">Mis guifos</a>
+          <a href="./views/myGifos/index.html?view=list" class="a-my-guifos"
+            >Mis guifos</a
+          >
         </div>
       </div>
     </header>
@@ -64,14 +118,31 @@
           autocomplete="off"
           onkeyup="keyupInputSearchGif()"
         />
-        <a class="ml8 btn-disabled" id="btn-search-gif" onclick="getSearchGif('',event);">
-          <img src="./assets/icons/lupa.svg" alt="img-search-gif" class="img-search-gif pr7" />Buscar
+        <a
+          class="ml8 btn-disabled"
+          id="btn-search-gif"
+          onclick="getSearchGif('',event);"
+        >
+          <img
+            src="./assets/icons/lupa.svg"
+            alt="img-search-gif"
+            class="img-search-gif pr7"
+          />Buscar
         </a>
       </form>
-      <div class="div-autocomplete-suggested-search pa hide" id="div-autocomplete-suggested-search">
-        <div class="search dF fdC" id="div-autocomplete-suggested-options"></div>
+      <div
+        class="div-autocomplete-suggested-search pa hide"
+        id="div-autocomplete-suggested-search"
+      >
+        <div
+          class="search dF fdC"
+          id="div-autocomplete-suggested-options"
+        ></div>
       </div>
-      <div class="div-autocomplete-hashTag hide" id="div-autocomplete-hashTag"></div>
+      <div
+        class="div-autocomplete-hashTag hide"
+        id="div-autocomplete-hashTag"
+      ></div>
     </section>
 
     <section class="section-sugerencias">
